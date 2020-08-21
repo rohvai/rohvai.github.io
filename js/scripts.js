@@ -158,7 +158,7 @@
                '</div>',
 
                titleSrc:function(item){
-                return item.el.attr('title');
+                return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('link')+'" target="_blank">SOURCE CODE</a>';
               }
             }
 		  
