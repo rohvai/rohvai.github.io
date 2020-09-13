@@ -10,7 +10,7 @@ metadata:
   name: $name
 spec:
   securityContext:
-    runAsUser: $(id -u)
+    runAsUser: 0
     fsGroup: $(id -g)
   containers:
   - name: $(whoami)
@@ -19,7 +19,7 @@ spec:
     - name: HOME
       value: /home/$(whoami)
     - name: NVIDIA_VISIBLE_DEVICES 
-      value: "4"
+      value: "8"
     command: ["/bin/bash", "-c", "--" ]
     args: [ "while true; do sleep 1; done;" ]
     volumeMounts:
